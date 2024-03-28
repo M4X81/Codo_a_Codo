@@ -1,0 +1,117 @@
+/*  esto es un comentario de linea*/
+/* 
+Esto
+es un comentario
+de bloque
+Por ejemplo 
+Autor: Nombre del Autor
+Fecha: Fecha de Creación
+Descripción: Este archivo CSS contiene los estilos para el sitio web X.
+*/
+/*
+Secciones del código CSS:
+1- Comentarios de cabecera(descripcion, etc)
+2- Reglas de estilo, ordenados por especificidad :
+    a- Reglas universales.
+    b- Reglas generales root o <html>, <body>, header, footer, main 
+    c- Otros selectores de tipo o etiquetas: hi, p, span, a
+    d- selectores de id 
+    e- selectores de clase
+    f- selectores especificos o pseudo-clases
+
+3- Media Queries
+
+*/
+:root {
+    font-size: 16px;
+}
+
+html,
+body {
+    padding: 0%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+
+/* selectores de clase */
+/* header  */
+.header {
+    margin: 0 auto;
+}
+
+
+.header_logo {
+    margin-top: 1.6rem;
+    margin-left: 1.6rem;
+    font-size: 1.1rem;
+}
+
+.header-color i {
+    color: #f2f2f2;
+}
+
+main {
+    height: 80%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* body  */
+.banner {
+    color: aliceblue;
+}
+
+.banner_content {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+
+}
+
+.banner_content h2 {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    margin-top: 4px;
+}
+
+.banner_content h1 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.button_action {
+    border-radius: 5%;
+    background-color: #a4a0a098;
+    margin-top: 20px;
+    padding: 5px 15px;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+}

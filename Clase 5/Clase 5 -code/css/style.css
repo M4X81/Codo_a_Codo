@@ -1,0 +1,129 @@
+/*  esto es un comentario de linea*/
+/* 
+Esto
+es un comentario
+de bloque
+Por ejemplo 
+Autor: Nombre del Autor
+Fecha: Fecha de Creación
+Descripción: Este archivo CSS contiene los estilos para el sitio web X.
+*/
+/*
+Secciones del código CSS:
+1- Comentarios de cabecera(descripcion, etc)
+2- Reglas de estilo, ordenados por especificidad :
+    a- Reglas universales.
+    b- Reglas generales root o <html>, <body>, header, footer, main 
+    c- Otros selectores de tipo o etiquetas: hi, p, span, a
+    d- selectores de id 
+    e- selectores de clase
+    f- selectores especificos o pseudo-clases
+
+3- Media Queries
+
+*/
+:root {
+    /*  
+   configuracion de variables por ejemplo: 
+   --color-primario: #007bff;  --> Define una variable para el color primario
+   Esta manera de escribir el nombre de la variable es convencional
+   */
+    font-size: 16px;
+}
+
+html,
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* selectores de clase */
+/* header  */
+
+/*  
+    *** UNIDADES *** 
+    unidad em observa la configuración de su padre 
+    unidad rem observa la configuración del root o ansestro mas alejado */
+.header_logo {
+    /* margin-top: 3rem;
+    margin-left: 3rem; esto no lo vamos a usar xq usamos el pos absoluto*/
+    /* propiedades del texto  */
+    font-size: 2em;
+    text-align: left;
+    text-decoration: none;
+    /* posicionamos el contenedor  */
+    position: absolute;
+    top: 3em;
+    left: 3em;
+    z-index: 1;
+}
+
+.header-color a i {
+    color: #f2f2f2;
+    /*color hexadecimal 6 posiciones alfanumericas y dos ultimas como canal alpha*/
+
+}
+
+
+/* body>main */
+
+.banner {
+    /* Configuramos la caja de la pantalla  */
+    height: 100vh;
+    position: relative;
+    /*el banner es el centro de referencia TODOS siguen al banner  */
+    overflow: hidden;
+
+}
+
+.banner_content {
+    text-align: center;
+    color: #f2f2f2;
+    /* posicion del contenedor  */
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+    z-index: 2;
+}
+
+.banner_content h1 {
+    font-size: 3em;
+    font-weight: bold;
+    word-break: break-all;
+}
+
+.banner_content h2 {
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+.button_action {
+    /* convertimps de linea a elemento de bloque  */
+    display: inline-block;
+
+    /* estilo en la geometria del boton  */
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 5px;
+    
+    /* propiedades de la fuente del boton  */
+    color: #f2f2f2;
+    font-size: 1em;
+    text-decoration: none;
+
+}
+
+.video_background{
+/* posicionamos el contenedor del video  */
+    position: absolute;
+    top: 0 ;
+    left: 0;
+    /* dimensiones del contenedor  */
+    width: 100dvw;
+    height: 100vh;
+    /* ajuste de la proporciondel video fill (estira), 
+    contain (no distorsiona), cover(acerca y cubre), none,  */
+    object-fit: cover;
+
+}

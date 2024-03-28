@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaC-Movies</title>
+</head>
+<!-- 
+En este práctico vamos a comenzar a desarrollar un sitio web
+En esta clase vamos a estructurar un menú valiendonos de listas y etiquetas
+semánticas correspondientes
+Vamos a establecer rutas para conectar distintas páginas 
+1- Diseñamos la barra de navegación
+2- vinculamos la seccion API Movie con la página con referencias absolutas
+3- Creamos la página register.html 
+4- Vinculamos el menú con la pagina register.html con referencias relativas
+5- Generamos un enlace interno
+6- Generamos una descarga de archivo
+-->
+
+<body>
+    <!-- diseño de la cabecera de la página -->
+    <!-- <header> es una sección que generalmente se encuentra en la parte superior
+    de una página web y proporciona información importante 
+    sobre el contenido o la navegación de esa página. 
+    Es importante tener en cuenta que el <header> 
+    no debe confundirse con el elemento <head>, 
+    que se utiliza para contener metadatos y enlaces a recursos externos 
+    en el documento HTML.
+
+-->
+    <header>
+        <!-- diseño de la barra de navegación -->
+
+        <nav>
+            <!-- espacio del logo-->
+            <h1>CaC-Movies</h1>
+            <!-- diseño del menú con etiqueta de listas desordenadas -->
+            <ul> 
+                <!-- listas desordenadas -->
+                <li>Tendencia</li>
+                <li>
+                    <a href="./register.html" title="Haz click aquí para registrarte">Registrarse</a>
+                </li>
+                <!--
+                    introducimos la etiqueta a con su atributo href
+                    hfer indica donde debe dirigiste el vinculo al hacer click 
+                    Para abrir un enlace en una nueva ventana o pestaña, 
+                    puedes utilizar el valor _blank
+                -->
+                <li>
+                  <a href="https://developer.themoviedb.org/docs" target="_blank" title="Haz click para ir a la página">API Movie</a>  
+                </li>
+                <li>Iniciar sesión</li>
+            </ul>
+
+
+            <ol>
+                <!-- listas ordenadas -->
+                <li>Tendencia</li>
+                <li>Registrarse</li>
+                <li>API Movie</li>
+                <li>Iniciar sesión</li>
+            </ol>
+        </nav>
+
+    </header>
+
+    <!-- estos elementos en linea se ubican unos al lado del otro
+    ya que ocupan solo su espacio y no todo el ancho del espacio de trabajo -->
+    
+    <a href="./register.html" download="nombre_personalizado.html">Descargar el documento</a>
+    <!-- <br> -->
+    <a href="">Volver a la cabecera</a>
+
+</body>
+
+</html>
