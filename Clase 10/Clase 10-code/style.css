@@ -1,0 +1,175 @@
+/* Clase 10: Grid*/
+
+/* Selectores de etiqueta*/
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Selectores de clase*/
+
+
+.container {
+    /* dimensiones*/
+    max-width: 980px;
+    margin: 0 auto;
+
+    /* predisponemos al padre para comportamiento en grillas */
+    display: grid;
+
+    /*cantidad y dimension de columnas*/
+    grid-template-columns: repeat(6, 1fr);
+
+    /* cantidad de filas 3*/
+    grid-template-rows: 10vh 75vh 10vh;
+
+    /* dimension de los gap*/
+    gap: 10px;
+
+}
+
+.main {
+    /* predisponemos el comportamiento de las hijas*/
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* cuantas columnas del padre utilizamos?*/
+    grid-column-start: 1;
+    grid-column-end: 7;
+    /*valor de los gap verticales*/
+    grid-gap: 10px;
+    /*esto esta obsoleto en algunos navegadores*/
+    grid-template-rows: auto;
+
+}
+
+.aside {
+    /*cuantas columnas del padre ocupa el aside?*/
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: aqua;
+    padding: 10px;
+
+}
+
+/* estilos para los encabezados*/
+
+.aside h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+
+}
+
+.aside ul {
+    list-style: none;
+}
+
+/*estilos a los enlaces*/
+.aside ul li a {
+    color: #007bff;
+    text-decoration: none;
+
+}
+
+/*efectos con pseudoselector*/
+.aside ul li a:hover {
+    text-decoration: underline;
+
+}
+
+/* espacio del section*/
+.section {
+    /*donde inicia y termina section*/
+    grid-column-start: 3;
+    grid-column-end: 7;
+    background-color: lightcyan;
+    padding: 10px;
+}
+
+/*pie/header*/
+
+.nav,
+.nav ul {
+    /*predisponemos comportamiento de los hijos*/
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    /*cuantas columnas del padre ocupamos?*/
+    grid-column-start: 1;
+    grid-column-end: 7;
+    /*valor de gap vertical*/
+    gap: 10px;
+    /*geometria del contenedor*/
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: beige;
+}
+
+.nav ul li {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+/*posicionamos los items de las barras de navegacion donde queremos*/
+/*utilizamos pseudoselectores*/
+
+.footer ul li:nth-child(1) {
+    /*donde posicionar en el grid?*/
+    grid-column: 2;
+    /*es el numero de la columna(no del borde)*/
+}
+
+header ul li:nth-child(1) {
+    /*donde posicionar en el grid?*/
+    grid-column: 4;
+}
+
+/*desplegable*/
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: #333;
+    display: none;
+}
+
+.dropdown .dropdown-content {
+    display: none;
+    /* Oculta la lista desplegable por defecto */
+    width: 100%;
+}
+
+.dropdown .dropdown-content li a {
+    margin: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    top: 100%;
+}
+
+.dropdown-content li a:hover:nth-child(n) {
+    color: red;
+    /* transform: skew(30deg, 20deg); */
+    transform: skew(10deg, 25deg);
+    transition: 0.5s ease-in-out;
+}
+
+.nav ul li a:hover {
+    color: rgb(255, 255, 0);
+    transform: scale(1.2);
+    transition: 150ms ease-in;
+}
