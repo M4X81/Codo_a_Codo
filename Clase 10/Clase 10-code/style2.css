@@ -1,0 +1,40 @@
+/* esto es para el menu en style.css*/
+
+/*desplegable*/
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: #333;
+    display: none;
+}
+
+.dropdown .dropdown-content {
+    display: none;
+    /* Oculta la lista desplegable por defecto */
+    width: 100%;
+}
+
+.dropdown .dropdown-content li a {
+    margin: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    top: 100%;
+}
+
+.dropdown-content li a:hover:nth-child(n) {
+    color: red;
+    /* transform: skew(30deg, 20deg); */
+    transform: skew(10deg, 25deg);
+    transition: 0.5s ease-in-out;
+}
+
+.nav ul li a:hover {
+    color: rgb(255, 255, 0);
+    transform: scale(1.2);
+    transition: 150ms ease-in;
+}
