@@ -23,3 +23,34 @@ document.write("Operador suma entre a y b " + (a+b)+"<br>");
 document.write("Operador resta entre a y b " + (a-b)+"<br>");
 document.write("Operador multiplicacion entre a y b " + (a*b)+"<br>");
 document.write("Operador division entre a y b " + (a/b)+"<br>");
+
+//Operadores de autoasignación
+// a = a + 8; -->a+=8; 
+// a = a + 10; -->a+=10;
+// a = a * 2; --> a*=2;
+
+document.write("<h2>Operadores de autoasignacion</h2>");
+document.write("Operador de autoasignacion a= a+8 : " + (a+=8)+"<br>");
+document.write("Operador de autoasignación a = a*2: "+(a*=2)+"<br><br><br><br><br><br>");
+//hacer el resto de los operadores
+
+
+//Operador incremental
+// a = a + 1; --> a++;
+
+document.write("<h2>Operadores incrementales</h2>");
+document.write("Operador de preincremento unitario de a + 1: " + (++a) + "<br>");
+document.write("Operador de post-incremento unitario de a + 1: " + (a++) + "<br>");
+document.write("Operador de a + 1 " + (a) + "<br><br><br>");
+
+//Operador decremental
+//a = a-1; --> a-- ó --a
+
+document.write("<h2>Operadores decrementales</h2> <br>");
+document.write("Operador de decremento unitario de a - 1: " + (--a) + "<br>");
+
+//Ejemplo de variables y operadores lógicos
+//Declaració e inicialización de variables lógicas
+
+let v = true;
+let f = false;
