@@ -2,7 +2,7 @@
  * autor/a:
  * version:
  * fecha: 
- * El siguiente script spp.js llama a los personajes
+ * El siguiente script app.js llama a los personajes
  * mediante las acciones que tienen programadas
  */
 
@@ -17,11 +17,20 @@ homero.obtenerFraseFavorita();
 marge.obtenerFoto();
 marge.obtenerNombre();
 marge.obtenerEdad();
+marge.esPelado();
 marge.obtenerFraseFavorita();
 
 // Bart
 bart.obtenerFoto();
 bart.obtenerNombre();
 bart.obtenerEdad();
+bart.esPelado();
 bart.obtenerFraseFavorita();
+
+// Lisa
+lisa.obtenerFoto();
+lisa.obtenerNombre();
+lisa.obtenerEdad();
+lisa.esPelado();
+lisa.obtenerFraseFavorita();
 

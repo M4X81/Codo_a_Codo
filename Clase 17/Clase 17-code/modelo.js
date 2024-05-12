@@ -46,6 +46,10 @@ function Simpson(nombre, edad, peso, esCalvo, fraseFavorita){
       }
     };
 
+    //Tarea para la casa consultar peso
+    this.obtenerPeso = function(){
+      document.write(`<p>Peso: ${this.peso} kg</p>`);
+  }
     // Método para obtener frase favorita
     this.obtenerFraseFavorita = function(){
         document.write(`<p>Frase favorita de ${this.nombre}: ${this.fraseFavorita}</p>`);
