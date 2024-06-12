@@ -4,5 +4,5 @@
 
 //Construcción de un array de frutas
 
-let frutas = ['naranja', 'pomelo', 'limon'];
+let frutas = ['naranja', 'pomelo', 'limon'] ;
 
