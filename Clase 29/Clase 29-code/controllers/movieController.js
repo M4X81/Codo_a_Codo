@@ -9,3 +9,12 @@
  * .deleteMovie
  */
 
+//1- Importamos el modulo db
+// El objeto db posee los métodos para conectar con la base de datos. 
+// Es la conexión a la base de datos.
+const db = require("../db/db");
+
+//2- getAllMovies
+const getAllMovies = (req, res)=>{
+
+}
