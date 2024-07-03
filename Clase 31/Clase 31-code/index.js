@@ -18,23 +18,71 @@ const express = require("express");
 //Creamos instancia de express
 const app = express();
 
+//Importamos cors
+const cors = require("cors");
+
+// Importa las rutas de autenticación
+const authRoutes = require('./routes/authRoutes');
+
+
+
 //FUTURA CONEXION CON FRONT
+//instalamos npm i cors y npm i dotenv
 
-//Importamos modulos propios
-const authRoutes = require("./routes/authRoutes");
 
+//Importamos dotEnv
+require("dotenv").config(); // ó const dotenv = require("dotenv") //dotenv.config    
 //Definimos puerto
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+console.log("Puerto definido:", process.env.PORT);
 
 //MIDDLEWARE DE CONEXION DE PUERTOS DIFERENTES
+//aca ponemos en funcionamiento cors
+//Middleware que permite conexiones de puertos distintos por ejemplo de un front port 5000
+//IMPORTANTE al desplegar en la web no incluir la linea cors
+app.use(cors());
+console.log("cors inicializado");
 
 //Middleware para analizar Json entrantes
 app.use(express.json());
+console.log("Servidor está iniciando...");
 
 //Codificar la ruta ppal
-app.use("/auth",authRoutes);
+// app.use("/auth",authRoutes); asi lo dio en la clase
+app.use('/auth', (req, res, next) => {
+    console.log(`Ruta de autenticación llamada: ${req.method} ${req.path}`);
+    next();
+}, authRoutes);
 
 //Inicializamos el server
-app.listen(PORT, ()=>{`Servidor escuchando en el puerto: ${PORT}`});
+app.listen(PORT, ()=>{console.log(`Servidor escuchando en el puerto: ${PORT}`)});
+
+console.log("Servidor iniciado correctamente.");
 
 //Pasamos a config
+
+// const express = require('express');
+// const app = express();
+// const authRoutes = require('./routes/authRoutes');
+
+// // Middleware para parsear JSON
+// app.use(express.json());
+
+// console.log("Servidor está iniciando...");
+
+// //Importamos dotEnv
+// require("dotenv").config();
+
+// // Usa las rutas de autenticación
+// app.use('/auth', (req, res, next) => {
+//     console.log(`Ruta de autenticación llamada: ${req.method} ${req.path}`);
+//     next();
+// }, authRoutes);
+
+// // Define el puerto y arranca el servidor
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {
+//     console.log(`Servidor escuchando en el puerto ${PORT}`);
+// });
+
+// console.log("Servidor iniciado correctamente.");

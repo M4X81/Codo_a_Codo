@@ -8,7 +8,7 @@
 module.exports = {
     secretKey: "password",
     tokenExpiresIn: "1h"
-}
+};
 
 // La clave se usa luego en la función jwt.sign() 
 // para crear el token y en jwt.verify() para verificar 
