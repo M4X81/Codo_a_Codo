@@ -1,6 +1,6 @@
 // URL del servidor
 // const PORT = process.env.PORT || 3000;
-const PORT = 3000;
+const PORT = 3001;
 const SERVER_URL = `http://localhost:${PORT}`;
 
 // Maneja el evento 'submit' del formulario de inicio de sesión con id 'loginForm'
